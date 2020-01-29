@@ -1,0 +1,70 @@
+﻿@page "{id:int}"
+@model RazorPages.Pages.Flat.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Flats</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Flats.ProductID" />
+            <div class="form-group">
+                <label asp-for="Flats.Name" class="control-label"></label>
+                <input asp-for="Flats.Name" class="form-control" />
+                <span asp-validation-for="Flats.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Flats.Type" class="control-label"></label>
+                <input asp-for="Flats.Type" class="form-control" />
+                <span asp-validation-for="Flats.Type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Flats.Region" class="control-label"></label>
+                <input asp-for="Flats.Region" class="form-control" />
+                <span asp-validation-for="Flats.Region" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Flats.Organization" class="control-label"></label>
+                <input asp-for="Flats.Organization" class="form-control" />
+                <span asp-validation-for="Flats.Organization" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Flats.Since" class="control-label"></label>
+                <input asp-for="Flats.Since" class="form-control" />
+                <span asp-validation-for="Flats.Since" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Flats.End" class="control-label"></label>
+                <input asp-for="Flats.End" class="form-control" />
+                <span asp-validation-for="Flats.End" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Flats.Status" class="control-label"></label>
+                <input asp-for="Flats.Status" class="form-control" />
+                <span asp-validation-for="Flats.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Flats.Price" class="control-label"></label>
+                <input asp-for="Flats.Price" class="form-control" />
+                <span asp-validation-for="Flats.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
